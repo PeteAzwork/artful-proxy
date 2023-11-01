@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "nextProxy": {
+            "matchCondition": {
+                "methods": [ "POST" ],
+                "route": "/Next"
+            },
+            "backendUri": "https://localhost/api/Next?<Proxy:NextProxySecret>"
+        },
+        "acknowledgeProxy": {
+            "matchCondition": {
+                "methods": [ "POST" ],
+                "route": "/{submissionId}/"
+            },
+            "backendUri": "https://localhost/api/{submissionId}/Acknowledge?<Proxy:AcknowledgeProxySecret>"
+        }
+    }
+}

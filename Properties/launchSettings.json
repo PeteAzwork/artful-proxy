@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "artful_proxy": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7037",
+      "launchBrowser": false
+    }
+  }
+}
